@@ -1,12 +1,10 @@
 <div class="row">
-    <base-chart class="chart"
-                [datasets]="lineChartData"
-                [labels]="lineChartLabels"
-                [options]="lineChartOptions"
-                [colors]="lineChartColors"
-                [legend]="lineChartLegend"
-                [chartType]="lineChartType"
-                (chartHover)="chartHovered($event)"
-                (chartClick)="chartClicked($event)">
-    </base-chart>
+    <div class="col-sm-6">
+        <h3>Title</h3>
+        <stats-bar></stats-bar>
+    </div>
+    <div class="col-sm-6">
+        <h3>Title</h3>
+        <stats-line></stats-line>
+    </div>
 </div>
