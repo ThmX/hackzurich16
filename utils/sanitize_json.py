@@ -2,6 +2,7 @@ import simplejson
 import datetime
 import base64
 import struct
+import sys
 
 def sanitize_json(fn):
 	STRING_LABELS = ["GPRMC_VALID", "ODO_PARTIAL_KM", "AREA_LIST", "MDI_CRASH_DETECTED", 
