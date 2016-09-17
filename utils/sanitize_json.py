@@ -45,3 +45,13 @@ def sanitize_json(fn):
 		del json_data[i]["recorded_at_ms"]
 		del json_data[i]["id_str"]
 
+
+	return json_data
+
+
+if(__name__ == __main__):
+
+	if(len(sys.argv) != 2):
+		raise Exception("Wrong argument passed. Usage: {:s} data.json".format(__name__))
+		
+	print(sanitize_json(sys.argv[1]))
