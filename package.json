@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "postinstall": "./node_modules/.bin/typings install && utils/configure_python.sh",
+    "postinstall": "./node_modules/.bin/typings install && utils/python_install.sh",
     "build": "./node_modules/.bin/gulp build",
     "start": "node ./bin/www"
   },

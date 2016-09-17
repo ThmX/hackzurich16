@@ -4,8 +4,17 @@
 # Node
 /typings/
 /node_modules/
+npm-debug.log
 
 # Generated web assets
 /public/.sass-cache/
 /public/fonts/
 /public/javascripts/
+
+# Python
+/utils/__pycache__/
+/utils/bin
+/utils/include
+/utils/lib
+/utils/.Python
+/utils/pip-selfcheck.json
