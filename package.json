@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-  	"postinstall": "./node_modules/.bin/typings install",
-  	"build": "./node_modules/.bin/gulp build",
+    "postinstall": "./node_modules/.bin/typings install",
+    "build": "./node_modules/.bin/gulp build",
     "start": "node ./bin/www"
   },
   "devDependencies": {
@@ -55,7 +55,7 @@
     "webpack-stream": "^3.2.0"
   },
   "dependencies": {
-  	"@angular/common": "2.0.0",
+    "@angular/common": "2.0.0",
     "@angular/compiler": "2.0.0",
     "@angular/compiler-cli": "0.6.2",
     "@angular/core": "2.0.0",
@@ -67,6 +67,7 @@
     "@angular/router": "3.0.0",
     "@angular/upgrade": "2.0.0",
     "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.4",
+    "angular2-google-maps": "^0.15.0",
     "angular2-in-memory-web-api": "0.0.20",
     "body-parser": "~1.15.1",
     "bootstrap": "^3.3.7",
@@ -76,8 +77,8 @@
     "debug": "~2.2.0",
     "express": "~4.14.0",
     "font-awesome": "^4.6.3",
-    "jquery": "^3.1.0",
     "hbs": "~4.0.0",
+    "jquery": "^3.1.0",
     "lodash": "^4.15.0",
     "morgan": "~1.7.0",
     "node-compass": "0.2.4",
