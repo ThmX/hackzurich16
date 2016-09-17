@@ -1,6 +1,23 @@
-<sebm-google-map [latitude]="logBox.location.lat" [longitude]="logBox.location.lng">
-    <sebm-google-map-marker *ngIf="logBox.location" [latitude]="logBox.location.lat" [longitude]="logBox.location.lng"></sebm-google-map-marker>
-    <sebm-google-map-polyline>
-        <sebm-google-map-polyline-point *ngFor="let event of logBox.events" [latitude]="gps.lat" [longitude]="gps.long"></sebm-google-map-polyline-point>
-    </sebm-google-map-polyline>
-</sebm-google-map>
+<div class="row">
+    <div class="col-sm-4">
+        <select class="form-control" [(ngModel)]="asset" (change)="updateAsset()">
+            <option>356156068026087</option>
+            <option>356156068030410</option>
+        </select>
+    </div>
+    <div class="col-sm-4">
+        <input type="number" class="form-control" (change)="updateData()" [(ngModel)]="fromDay" min="1" max="15" />
+    </div>
+    <div class="col-sm-4">
+        <input type="number" class="form-control" (change)="updateData()" [(ngModel)]="toDay" min="1" max="15" />
+    </div>
+</div>
+
+<div id="gmaps" class="row">
+    <sebm-google-map *ngIf="logbox && logbox.location" [latitude]="logbox.location.lat" [longitude]="logbox.location.long">
+        <sebm-google-map-marker [latitude]="logbox.location.lat" [longitude]="logbox.location.long"></sebm-google-map-marker>
+        <sebm-google-map-polyline>
+            <sebm-google-map-polyline-point *ngFor="let event of logbox.trace()" [latitude]="event.location.lat" [longitude]="event.location.long"></sebm-google-map-polyline-point>
+        </sebm-google-map-polyline>
+    </sebm-google-map>
+</div>

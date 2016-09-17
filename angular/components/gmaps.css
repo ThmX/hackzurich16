@@ -1,3 +1,7 @@
+#gmaps {
+    padding-top: 30px;
+}
+
 .sebm-google-map-container {
-    height: 300px;
+    height: 600px;
 }

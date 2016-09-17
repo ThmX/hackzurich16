@@ -1,8 +1,12 @@
 {
   "globalDependencies": {
+    "chart.js": "registry:dt/chart.js#0.0.0+20160914124927",
     "core-js": "registry:dt/core-js#0.0.0+20160914114559",
     "jasmine": "registry:dt/jasmine#2.2.0+20160621224255",
     "lodash": "registry:dt/lodash#4.14.0+20160830145422",
     "node": "registry:dt/node#6.0.0+20160915134512"
+  },
+  "dependencies": {
+    "dateformat": "registry:npm/dateformat#1.0.0+20160723033700"
   }
 }

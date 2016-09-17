@@ -3,6 +3,7 @@ import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import {BrowserModule} from '@angular/platform-browser';
 
+import {ChartsModule} from 'ng2-charts/ng2-charts';
 import {AgmCoreModule} from 'angular2-google-maps/core';
 
 import {MainComponent}  from './components/main.component';
@@ -17,6 +18,7 @@ import {LogBoxService} from './services/logbox.service';
         BrowserModule,
         FormsModule,
         HttpModule,
+        ChartsModule,
         AgmCoreModule.forRoot({
             apiKey: 'AIzaSyCRVK9f_J4IhW5B0JL4zH0HK0jbm16ka-U'
         }),

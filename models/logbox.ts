@@ -85,6 +85,10 @@ export class LogBox {
         public events: LBEvent[]
     ) {}
 
+    trace(): LBEvent[] {
+        return _.filter(this.events, evt => evt.location);
+    }
+
     static fromEvents(events: RawEvent[]): LogBox {
         if (events) {
             let evt = _.find(events, (evt: RawEvent) => evt.loc);
