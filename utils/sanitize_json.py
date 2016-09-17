@@ -49,9 +49,9 @@ def sanitize_json(fn):
 	return json_data
 
 
-if(__name__ == __main__):
+if(__name__ == "__main__"):
 
 	if(len(sys.argv) != 2):
 		raise Exception("Wrong argument passed. Usage: {:s} data.json".format(__name__))
-		
+
 	print(sanitize_json(sys.argv[1]))
