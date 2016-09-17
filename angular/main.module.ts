@@ -5,13 +5,12 @@ import {BrowserModule} from '@angular/platform-browser';
 
 import {AgmCoreModule} from 'angular2-google-maps/core';
 
-
 import {MainComponent}  from './components/main.component';
 import {routing, routingDeclarations, routingProviders} from './main.routing';
 import {HighlightDirective} from './directives/highlight.directive';
 import {LocalStorageService, SessionStorageService} from './services/storage.service';
 import {RestService} from './services/rest.service';
-import {UserService} from './services/user.service';
+import {LogBoxService} from './services/logbox.service';
 
 @NgModule({
     imports: [
@@ -33,7 +32,7 @@ import {UserService} from './services/user.service';
         LocalStorageService,
         SessionStorageService,
         RestService,
-        UserService
+        LogBoxService
     ],
     bootstrap: [
         MainComponent
