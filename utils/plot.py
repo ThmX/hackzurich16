@@ -14,11 +14,26 @@ def plot(x, y, title, xlab, ylab, fname=""):
 	    r, g, b = tableau20[i]    
 	    tableau20[i] = (r / 255., g / 255., b / 255.) 
 
-	plt.plot(x, y, "-", color=tableau20[0], linewidth=2.)
-	ax = plt.gca()
-	extent = max(y) - min(y)
+	if(type(x) == type([]) or len(x.shape) == 2):
+		min_y = min(y[0])
+		max_y = max(y[0])
+		for i in range(len(x)):
+			min_y = min(min_y, min(y[i]))
+			max_y = max(max_y, max(y[i]))
+			plt.plot(x[i], y[i], "-", color=tableau20[2*i], linewidth=2.)
+			plt.hold(True)
+		extent = max_y - min_y
+	else:
+		plt.plot(x, y, "-", color=tableau20[0], linewidth=2.)
+		min_y = y.min()
+		max_y = y.max()
+		extent = max_y - min_y
 
-	ax.set_ylim(min(y) - 0.1*extent, max(y) + 0.1*extent)
+
+	ax = plt.gca()
+
+
+	ax.set_ylim(min_y - 0.1*extent, max_y + 0.1*extent)
 	ax.spines['top'].set_visible(False)
 	ax.spines['right'].set_visible(False)
 	ax.spines['bottom'].set_visible(False)
