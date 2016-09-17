@@ -1,0 +1,10 @@
+# IntelliJ IDEA project
+/.idea/
+
+# Node
+/typings/
+/node_modules/
+
+# Generated web assets
+/public/fonts/
+/public/javascripts/
